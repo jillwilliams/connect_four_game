@@ -1,0 +1,136 @@
+body {
+    font-family: "Iceland";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f9;
+}
+
+.heading {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+/* text directions */
+.heading h3 {
+    max-width: 400px;
+}
+
+/* Top row where players click to drop a piece */
+.players-choice {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+.players-choice div {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: 1px solid grey;
+}
+
+/* Hover colors showing whose turn it is */
+.players-choice.red-turn div:hover {
+    background-color: rgba(231, 76, 60, 0.5);
+}
+
+.players-choice.yellow-turn div:hover {
+    background-color: rgba(241, 196, 15, 0.5);
+} 
+
+/* Main blue board */
+.game-board {
+    background-color: #2980b9;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.game-board > div {
+    display: flex;
+    gap: 10px;
+}
+
+/* Individual circular holes */
+.game-board > div > div {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* the 1 player vs ai button */
+#game-mode {
+    background-color: #e74c3c;
+    border-radius: 50px;
+    border: 2px solid black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* the button restart game */
+#start-game {
+    padding: 20px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: 2px black solid;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+/* the text under the buttons */
+#status {
+    font-size: 35px;
+    font-weight: bold;
+    height: 24px;
+}
+
+/* Player piece colors */
+.red-piece {
+    background-color: #e74c3c !important;
+}
+
+.yellow-piece {
+    background-color: #f1c40f !important;
+}
+
+/* Drop animation with a subtle bounce at the bottom */
+.drop-animation {
+    animation: dropBounce 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 2;
+}
+
+@keyframes dropBounce {
+    0% {
+        transform: translateY(var(--drop-distance));
+    }
+    75% {
+        transform: translateY(0);
+    }
+    88% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

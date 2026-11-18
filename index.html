@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Four</title>
+    <link HREF="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower|Shadows+Into+Light|Fresca|Nunito|Yoyu|Iceland|Arial|Yeseva One|Tagesschrift|du+NSW+ACT+Cursive|BenchNine|Birthstone|Jolly Lodger|Nosifer|Quicksand|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="heading">
+        <h2>CONNECT FOUR</h2>
+        <h3>Click on the circles above the game board to choose which column you would like to drop your circle in. Get four pieces in a row to win!</h3>
+        <div class="controls">
+        <select id="game-mode">
+            <option value="ai">1 Player (vs AI)</option>
+            <option value="pvp">2 Players</option>
+        </select>
+        <button id="start-game">START GAME</button>
+        </div>
+        <div id="status">Press Start Game to begin!</div>
+    </div>
+    
+    <div class="players-choice">
+        <div id="c1"></div> 
+        <div id="c2"></div> 
+        <div id="c3"></div>
+        <div id="c4"></div> 
+        <div id="c5"></div> 
+        <div id="c6"></div> 
+        <div id="c7"></div>
+    </div>
+
+    <div class="game-board">
+        <div class="players-choice-one">
+            <div id="r11"></div> 
+            <div id="r12"></div> 
+            <div id="r13"></div> 
+            <div id="r14"></div> 
+            <div id="r15"></div> 
+            <div id="r16"></div> 
+            <div id="r17"></div>
+        </div>
+        <div class="players-choice-two">
+            <div id="r21"></div> 
+            <div id="r22"></div> 
+            <div id="r23"></div> 
+            <div id="r24"></div> 
+            <div id="r25"></div> 
+            <div id="r26"></div> 
+            <div id="r27"></div>
+        </div>
+        <div class="players-choice-three">
+            <div id="r31"></div> 
+            <div id="r32"></div> 
+            <div id="r33"></div> 
+            <div id="r34"></div> 
+            <div id="r35"></div> 
+            <div id="r36"></div> 
+            <div id="r37"></div>
+        </div>
+        <div class="players-choice-four">
+            <div id="r41"></div> 
+            <div id="r42"></div> 
+            <div id="r43"></div> 
+            <div id="r44"></div> 
+            <div id="r45"></div> 
+            <div id="r46"></div> 
+            <div id="r47"></div>
+        </div>
+        <div class="players-choice-five">
+            <div id="r51"></div> 
+            <div id="r52"></div> 
+            <div id="r53"></div> 
+            <div id="r54"></div> 
+            <div id="r55"></div> 
+            <div id="r56"></div> 
+            <div id="r57"></div>
+        </div>
+        <div class="players-choice-six">
+            <div id="r61"></div> 
+            <div id="r62"></div> 
+            <div id="r63"></div> 
+            <div id="r64"></div> 
+            <div id="r65"></div> 
+            <div id="r66"></div> 
+            <div id="r67"></div>
+        </div>
+    </div>
+
+    <script src="app2.js"></script>
+</body>
+</html>
